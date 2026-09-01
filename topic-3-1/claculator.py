@@ -1,6 +1,6 @@
-minutes_available = int(input("minuetes avalible: ")) #the var minutes avalible is set to the input of the number of minues availible, and has data type "integer"
-breaks = int(input("Minutes Per Break: ")) #the var breaks is set to the input of the number of breaks, and has data type "integer"
-break_minutes =int(input("Minutes Per Break: ")) #the break minutes avalible is set to the input of the number of minues per break, and has data type "integer"
+minutes_available = int(input("minutes available: ")) #the var minutes available is set to the input of the number of minutes available, and has data type "integer"
+breaks = int(input("Number of Breaks: ")) #the var breaks is set to the input of the number of breaks, and has data type "integer"
+break_minutes =int(input("Minutes Per Break: ")) #the break minutes available is set to the input of the number of minutes per break, and has data type "integer"
 
 work_minutes = minutes_available - breaks * break_minutes #the work minutes is set to the # availble minutes minus breaks times time per break
 
