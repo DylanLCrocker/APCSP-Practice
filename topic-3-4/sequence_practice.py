@@ -16,5 +16,15 @@ print(title[13:])
 print(": " + str(scores))
 #6
 print(title + ": " + str(scores[0:]))
-
 # 7. because lists contaiin many vars so you can replaceone at a time, however a string is only on var and parts of it can't be replaced.
+
+#Part 2
+# PROVIDED INPUT: replace your old value/label selection with this.
+values[selected_index] = int(input("Enter a number: "))
+clock_value = values[selected_index]
+selected_label = labels[selected_index]
+print("You entered:", clock_value)
+
+# YOUR CODE START: range decision, existing report, parity decision.
+
+# YOUR CODE END
