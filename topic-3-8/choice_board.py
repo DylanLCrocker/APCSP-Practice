@@ -19,8 +19,8 @@ while (num > 0) :
     num -= root ** 2
     passes += 1
 
-for i in range(0, len(list_squares), 1) :
-    recreated_value += (list_squares[i]) ** 2
+for i in list_squares :
+    recreated_value += (i) ** 2
 
 frequencys = {}
 

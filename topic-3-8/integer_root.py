@@ -1,6 +1,16 @@
-input = int(input())
+n = 101
+lower = 0
+upper = 1001
 
-if (input > 1000000) or (input < 0) :
+if (n > 1000000) or (n < 0) :
     print("Domain Error")
 
-print("YAY")
+while (upper - lower) > 1 :
+    midpoint = (lower + upper) // 2
+    if midpoint ** 2 <= n :
+        lower = midpoint
+    else :
+        upper = midpoint
+
+print("Input: " + str(n))
+print("Largest Perfect Square: " + str(lower))

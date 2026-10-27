@@ -14,6 +14,5 @@ while new_num >= 10 :
         num = num // 10
     num = new_num
 
-
-print(new_num)
-print(repetitions)
+print("Final Sum: " + str(new_num))
+print("Repititions: " + str (repetitions))
