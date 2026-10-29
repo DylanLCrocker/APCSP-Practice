@@ -1,48 +1,52 @@
 """Game Status: refactor render_status without changing its behavior."""
 
-def bind_type(type, max) :
+
+def bind_type(type, max):
     shown_type = type
-    if shown_type < 0 :           
+    if shown_type < 0:
         shown_type = 0
-    elif shown_type > max :
-         shown_type = max
+    elif shown_type > max:
+        shown_type = max
     return shown_type
 
-def create_bar(type, shown_type, max) :
+
+def create_bar(type, shown_type, max):
     type_filled = shown_type * 10 // max
     type_bar = "["
     for position in range(10):
         if position < type_filled:
-            type_bar = type_bar + "#"
+            type_bar += "#"
         else:
-            type_bar = type_bar + "-"
-    type_bar = type_bar + "]"
+            type_bar += "-"
+    type_bar += "]"
     return type_bar
 
-def format_duration(total_seconds) :
+
+def format_duration(total_seconds):
 
     total_minutes = total_seconds // 60
     total_remainder = total_seconds % 60
     total_text = str(total_minutes) + ":"
     if total_remainder < 10:
-        total_text = total_text + "0"
-    total_text = total_text + str(total_remainder)
+        total_text += "0"
+    total_text += str(total_remainder)
 
     return total_text
+
 
 def render_status(name, health, energy, elapsed_seconds, best_seconds, scores):
     # Keep this function's name, parameters, and returned report.
     # Add your own helper functions above it.
 
     # Bound the two meters.
-    
+
     shown_health = bind_type(health, 100)
     shown_energy = bind_type(energy, 60)
 
     # Build two bars. // keeps the whole-number part of the division.
 
     health_bar = create_bar(health, shown_health, 100)
-    energy_bar = create_bar(energy,shown_energy, 60)
+    energy_bar = create_bar(energy, shown_energy, 60)
 
     # Format two durations.
 
@@ -53,7 +57,7 @@ def render_status(name, health, energy, elapsed_seconds, best_seconds, scores):
     total = 0
     highest = scores[0]
     strong_count = 0
-    
+
     for score in scores:
         total = total + score
         if score > highest:

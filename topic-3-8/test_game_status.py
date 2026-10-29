@@ -73,7 +73,6 @@ def check(label, arguments, expected):
         print("Unexpected printed output: " + repr(output.getvalue()))
     return False
 
-
 def main():
     passed = 0
     for label, arguments, expected in CASES:

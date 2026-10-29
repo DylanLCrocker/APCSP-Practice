@@ -11,5 +11,4 @@ while a != b :
         repetitions += 1
 
 print("GCF: " + str(a))
-
 print("Repetitions: " + str(repetitions))
