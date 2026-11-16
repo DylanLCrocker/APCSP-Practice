@@ -8,7 +8,7 @@ import game
 def test_is_equal_distrabution():
     counts = [0, 0, 0]
     for i in range(0, 10000, 1):
-        result = game.random_move()
+        result = game.stratagy_random_move()
         counts[result] += 1
     assert counts == pytest.approx([3333, 3333, 3333], rel=0.05)
 
@@ -19,6 +19,8 @@ def test_string_conversion() :
 
 def test_find_winner() :
     assert game.find_winner("Scissors", "Scissors") == "Scissors = Scissors, It's a Tie"
+    assert game.find_winner("Scissors", "Paper") == "Scissors > Paper, Player 1 Wins!"
+    assert game.find_winner("Scissors", "Rock") == "Rock > Scissors, Player 2 Wins!"
 
 def test_new_test() :
     pass
